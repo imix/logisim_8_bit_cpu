@@ -2,14 +2,20 @@
 
 This is a toy 8-bit CPU written in [logisim evolution](https://github.com/logisim-evolution/logisim-evolution). 
 
+The CPU has two working registers, A and B. A is the automatic target of many operations.
+
 It has a smallish instruction set.
 
-| command | operation | memory representation |
+| mnemonic | operation | opcode |
 | ------- | --------- | --------------------- |
 | NOP	| 	| 0000 |
-| LDA	| Addr -> A	| 0001 |
-| LDB	| Addr -> B	| 0002 |
-| STA	| A -> Addr	| 0003 |
-| STB	| B -> Addr	| 0004 |
-| ADD	| A + B -> A	| 0005 |
+| LDA	| Addr -> A	| 0x01 |
+| LDB	| Addr -> B	| 0x02 |
+| STA	| A -> Addr	| 0x03 |
+| STB	| B -> Addr	| 0x04 |
+| ADD	| A + B -> A	| 0x05 |
+| HLT	| HALT | 0xff |
 
+
+## Sample programs
+In the folder sample\_programs you find some examples. Load them into the RAM and run the simulation.
