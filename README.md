@@ -15,6 +15,8 @@ It has a smallish instruction set.
 | STB Addr	| B -> Addr	| 0x04 |
 | ADD	| A + B -> A	| 0x05 |
 | SUB	| A - B -> A	| 0x06 |
+| MUL	| A * B -> A	| 0x07 |
+| DIV	| A / B -> A	| 0x08 |
 | JMP Addr	| JMP Addr | 0x10 |
 | JPZ Addr	| JMP if zero to Addr | 0x20 |
 | HLT	| HALT | 0xff |
