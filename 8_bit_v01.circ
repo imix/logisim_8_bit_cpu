@@ -498,6 +498,11 @@
       <a name="label" val="REGB_DATA"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="0" loc="(890,1640)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="REGA_DATA"/>
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="0" loc="(930,590)" name="Splitter">
       <a name="fanout" val="3"/>
       <a name="incoming" val="3"/>
@@ -541,6 +546,8 @@
 000010010010xxxx 000000001000000000000010 # and done
 000010100001xxxx 010100000001100000100001 # or a | b -&gt; a
 000010100010xxxx 000000001000000000000010 # or done
+000010110001xxxx 011000000001100000100001 # not a -&gt; a
+000010110010xxxx 000000001000000000000010 # not a done
 000100000001xxxx 000000000000001000010100 # jmp get ix
 000100000010xxxx 000000000010010000000000 # jmp load pc from ix
 000100010011xxxx 000000001000000000000010 # jmp done
@@ -574,6 +581,9 @@
       <a name="width" val="8"/>
     </comp>
     <comp lib="1" loc="(660,430)" name="OR Gate"/>
+    <comp lib="1" loc="(980,1640)" name="NOT Gate">
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="10" loc="(260,1150)" name="Digital Oscilloscope"/>
     <comp lib="2" loc="(1270,1410)" name="Multiplexer">
       <a name="select" val="4"/>
@@ -656,6 +666,8 @@
     <wire from="(1040,700)" to="(1060,700)"/>
     <wire from="(1050,1140)" to="(1050,1240)"/>
     <wire from="(1050,1240)" to="(1190,1240)"/>
+    <wire from="(1050,1390)" to="(1050,1640)"/>
+    <wire from="(1050,1390)" to="(1230,1390)"/>
     <wire from="(1060,680)" to="(1060,700)"/>
     <wire from="(1060,700)" to="(1060,770)"/>
     <wire from="(1060,770)" to="(1150,770)"/>
@@ -867,6 +879,7 @@
     <wire from="(890,1520)" to="(950,1520)"/>
     <wire from="(890,1560)" to="(950,1560)"/>
     <wire from="(890,1600)" to="(950,1600)"/>
+    <wire from="(890,1640)" to="(950,1640)"/>
     <wire from="(930,1120)" to="(930,1130)"/>
     <wire from="(930,1130)" to="(950,1130)"/>
     <wire from="(930,1150)" to="(930,1160)"/>
@@ -888,6 +901,7 @@
     <wire from="(950,570)" to="(1040,570)"/>
     <wire from="(950,580)" to="(1040,580)"/>
     <wire from="(970,1160)" to="(970,1180)"/>
+    <wire from="(980,1640)" to="(1050,1640)"/>
     <wire from="(990,1140)" to="(1050,1140)"/>
     <wire from="(990,1260)" to="(1180,1260)"/>
     <wire from="(990,1340)" to="(1000,1340)"/>

@@ -19,6 +19,7 @@ It has a smallish instruction set.
 | DIV	| A / B -> A	| 0x08 | Divide A by B and store into A |
 | AND	| A & B -> A	| 0x09 | bitwise AND A and B |
 | OR	| A | B -> A	| 0x0A | bitwise OR A and B |
+| NOT	| NOT A -> A	| 0x0B | bitwise NOT A |
 | JMP Addr	| JMP Addr | 0x10 | Unconditional jump to address |
 | JPZ Addr	| JMP if zero to Addr | 0x20 | jump if zero bit set |
 | HLT	| HALT | 0xff | halt operation |
