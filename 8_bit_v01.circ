@@ -478,6 +478,26 @@
       <a name="label" val="REGB_DATA"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="0" loc="(890,1480)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="REGA_DATA"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(890,1520)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="REGB_DATA"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(890,1560)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="REGA_DATA"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(890,1600)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="REGB_DATA"/>
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="0" loc="(930,590)" name="Splitter">
       <a name="fanout" val="3"/>
       <a name="incoming" val="3"/>
@@ -485,6 +505,12 @@
     <comp lib="0" loc="(970,1180)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="CARRY"/>
+    </comp>
+    <comp lib="1" loc="(1000,1500)" name="AND Gate">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(1000,1580)" name="OR Gate">
+      <a name="width" val="8"/>
     </comp>
     <comp lib="1" loc="(1150,770)" name="PLA">
       <a name="in_width" val="16"/>
@@ -511,6 +537,10 @@
 000001110010xxxx 000000001000000000000010 # mul done
 000010000001xxxx 001100000001100000100001 # div a / b -&gt; a
 000010000010xxxx 000000001000000000000010 # div done
+000010010001xxxx 010000000001100000100001 # and a &amp; b -&gt; a
+000010010010xxxx 000000001000000000000010 # and done
+000010100001xxxx 010100000001100000100001 # or a | b -&gt; a
+000010100010xxxx 000000001000000000000010 # or done
 000100000001xxxx 000000000000001000010100 # jmp get ix
 000100000010xxxx 000000000010010000000000 # jmp load pc from ix
 000100010011xxxx 000000001000000000000010 # jmp done
@@ -606,6 +636,8 @@
     </comp>
     <wire from="(1000,1340)" to="(1000,1350)"/>
     <wire from="(1000,1350)" to="(1230,1350)"/>
+    <wire from="(1000,1500)" to="(1030,1500)"/>
+    <wire from="(1000,1580)" to="(1040,1580)"/>
     <wire from="(1000,430)" to="(1020,430)"/>
     <wire from="(1000,460)" to="(1010,460)"/>
     <wire from="(1010,1360)" to="(1010,1420)"/>
@@ -617,6 +649,10 @@
     <wire from="(1020,430)" to="(1020,520)"/>
     <wire from="(1020,520)" to="(1040,520)"/>
     <wire from="(1020,550)" to="(1040,550)"/>
+    <wire from="(1030,1370)" to="(1030,1500)"/>
+    <wire from="(1030,1370)" to="(1230,1370)"/>
+    <wire from="(1040,1380)" to="(1040,1580)"/>
+    <wire from="(1040,1380)" to="(1230,1380)"/>
     <wire from="(1040,700)" to="(1060,700)"/>
     <wire from="(1050,1140)" to="(1050,1240)"/>
     <wire from="(1050,1240)" to="(1190,1240)"/>
@@ -827,6 +863,10 @@
     <wire from="(890,1360)" to="(930,1360)"/>
     <wire from="(890,1400)" to="(930,1400)"/>
     <wire from="(890,1440)" to="(930,1440)"/>
+    <wire from="(890,1480)" to="(950,1480)"/>
+    <wire from="(890,1520)" to="(950,1520)"/>
+    <wire from="(890,1560)" to="(950,1560)"/>
+    <wire from="(890,1600)" to="(950,1600)"/>
     <wire from="(930,1120)" to="(930,1130)"/>
     <wire from="(930,1130)" to="(950,1130)"/>
     <wire from="(930,1150)" to="(930,1160)"/>
